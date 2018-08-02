@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dubbo="http://dubbo.apache.org/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://dubbo.apache.org/schema/dubbo http://dubbo.apache.org/schema/dubbo/dubbo.xsd">
+    <dubbo:application name="pinyougou-goods-service"/>
+    <dubbo:annotation package="com.pinyougou.service.impl"/>
+    <dubbo:protocol name="dubbo" port="20880"/>
+    <dubbo:registry protocol="zookeeper" address="192.168.110.130:2181,192.168.110.130:2182,192.168.110.130:2183"/>
+</beans>
